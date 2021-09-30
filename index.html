@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arbetsuppgifter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div id="app">
+    <form v-on:submit.prevent="addTaskToList">
+        <input v-model="listItem" placeholder="Task:">
+        <input v-model="listName" placeholder="Employee:">
+        <input v-model="listDeadline" placeholder="Deadline(YYYY-MM-DD):">
+        <button class="submitButton">Submit task</button>
+    </form>
+
+    <list-output v-for="(item, index) in listObject"
+                 :style="{backgroundColor: item.prioColor}"
+                 v-bind:key="item.id"
+                 v-bind:p-list-element="'Prio: ' + item.prio + ' | Task: ' + item.task + ' | Name: ' + item.name + ' | ' + calculateDeadline(item.deadline) "
+                 v-on:remove-item="deleteItem(index)"
+                 v-on:increase-item="increasePrio(item)"
+                 v-on:reduce-item="reducePrio(item)">
+    </list-output>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="js/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+h1{
+    text-align: center;
+}
+
+input {
+    width: 95%;
+    height: 50px;
+
+}
+
+.submitButton {
+    margin-left: 5px;
+    width: 95%;
+    height: 50px;
+}
+
+#listOutput {
+    list-style: none;
+    text-align: center;
+}
+
+p{
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000,
+            0   -1px 0 #000,
+            1px -1px 0 #000,
+            1px  0   0 #000,
+            1px  1px 0 #000,
+            0    1px 0 #000,
+            -1px  1px 0 #000,
+            -1px  0   0 #000;
+}
+
+li {
+    padding: 10px
+}
+
+.outputButton {
+    min-width: 60px;
+    width: 30%;
+    height: 50px;
+}
+
+li span {
+    display: block;
+}
+
+ul {
+    padding-left: 0;
+}
+
+/*	Desktop and tablet	*/
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    form {
+        margin: 1%;
+        text-align: center;
+    }
+
+    input {
+        width: 20%;
+        height: 20px;
+    }
+
+    .submitButton {
+        width: 150px;
+        height: 25px;
+        margin: 0;
+    }
+
+    #listOutput {
+        margin: auto;
+    }
+
+    li {
+        margin-bottom: 0;
+    }
+
+    .outputButton {
+        width: 75px;
+        height: 25px;
+    }
+
+    li span {
+        display: inline;
+    }
+}
