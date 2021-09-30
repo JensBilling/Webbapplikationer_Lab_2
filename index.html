@@ -9,11 +9,18 @@
 <body>
 
 <div id="app">
+    <h1 v-if="companyName == ''"></h1>
+    <h1 v-else>{{ companyName }}'s project list:</h1>
+    <form v-on:submit.prevent="changeCompanyName">
+        <input v-model="newCompanyName" placeholder="Company name:">
+        <button id="submitCompanyButton"> Submit company name</button>
+    </form>
+
     <form v-on:submit.prevent="addTaskToList">
         <input v-model="listItem" placeholder="Task:">
         <input v-model="listName" placeholder="Employee:">
         <input v-model="listDeadline" placeholder="Deadline(YYYY-MM-DD):">
-        <button class="submitButton">Submit task</button>
+        <button id="submitButton">Submit task</button>
     </form>
 
     <list-output v-for="(item, index) in listObject"

@@ -18,22 +18,39 @@ Vue.component('listOutput', {
 new Vue({
     el: '#app',
     data: {
-        companyName: 'test',
+        companyName: '',
+        newCompanyName: '',
         listObject: [
             {
                 id: 1,
                 task: 'iOS app',
-                name: 'Jens B',
+                name: 'Jens',
                 deadline: '2021-10-19',
                 prio: 1,
                 prioColor: 'darkred'
+            },
+            {
+                id: 2,
+                task: 'Android app',
+                name: 'Jerry',
+                deadline: '2021-10-19',
+                prio: 2,
+                prioColor: 'darkorange'
+            },
+            {
+                id: 3,
+                task: 'Debugging',
+                name: 'Kalle',
+                deadline: '2021-10-19',
+                prio: 3,
+                prioColor: 'darkgreen'
             }
         ],
         listItem: '',
         listName: '',
         listDeadline: '',
         allFieldsFilled: false,
-        nextId: 2
+        nextId: 4
     },
     methods: {
         addTaskToList() {
@@ -113,6 +130,10 @@ new Vue({
         },
         deleteItem(index) {
             this.listObject.splice(index, 1)
+        },
+        changeCompanyName(event){
+            this.companyName = this.newCompanyName
+            event.preventDefault()
         }
     }
 })

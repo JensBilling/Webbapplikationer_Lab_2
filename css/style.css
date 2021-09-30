@@ -8,7 +8,13 @@ input {
 
 }
 
-.submitButton {
+#submitButton {
+    margin-left: 5px;
+    width: 95%;
+    height: 50px;
+}
+
+#submitCompanyButton {
     margin-left: 5px;
     width: 95%;
     height: 50px;
@@ -67,8 +73,14 @@ ul {
         height: 20px;
     }
 
-    .submitButton {
+    #submitButton {
         width: 150px;
+        height: 25px;
+        margin: 0;
+    }
+
+    #submitCompanyButton {
+        width: 25%;
         height: 25px;
         margin: 0;
     }
