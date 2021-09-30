@@ -131,9 +131,8 @@ new Vue({
         deleteItem(index) {
             this.listObject.splice(index, 1)
         },
-        changeCompanyName(event){
+        changeCompanyName(){
             this.companyName = this.newCompanyName
-            event.preventDefault()
         }
     }
 })
